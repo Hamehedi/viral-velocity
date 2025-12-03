@@ -7,6 +7,7 @@ export enum AppView {
 
 export interface UserCredentials {
   adSenseId: string;
+  adSenseCustomerId: string;
   amazonAffiliateTag: string;
   bloggerBlogId: string;
   adSenseSlotId: string;
@@ -38,6 +39,7 @@ export interface BlogPost {
   views: string;
   publishDate?: string;
   type: 'HERO' | 'STANDARD' | 'TRENDING';
+  content?: GeneratedContent;
 }
 
 export interface GeneratedFeed {
@@ -59,8 +61,9 @@ export interface GeneratedContent {
   authorBio: string;
   affiliateProduct?: string;
   affiliateCta?: string;
-  relatedPosts: { title: string; category: string }[];
+  relatedPosts: { title: string; category: string; tags: string[] }[];
   projectedEarnings?: number;
+  groundingLinks?: { title: string; url: string }[];
 }
 
 export interface ScriptOptions {

@@ -1,5 +1,6 @@
 
-import { PipelineConfig } from './types';
+
+import { PipelineConfig, GeneratedFeed } from './types';
 
 export const TIER_1_CATEGORIES = [
   "Insurance", "Mortgages", "Legal Services", "SaaS Tech", "Credit Cards", 
@@ -33,13 +34,14 @@ export const DEFAULT_CONFIG: PipelineConfig = {
   language: 'English',
   credentials: {
     adSenseId: 'pub-2250931776047846',
+    adSenseCustomerId: '6292420416',
     amazonAffiliateTag: 'velocity20-20',
     bloggerBlogId: '123456789',
     adSenseSlotId: '1234567890'
   }
 };
 
-export const INITIAL_POSTS = {
+export const INITIAL_POSTS: GeneratedFeed = {
   hero: {
     id: '1',
     title: "Markets Rally As New Tech Regulation Stalls In Senate",

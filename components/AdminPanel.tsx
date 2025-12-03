@@ -144,6 +144,17 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ config, setConfig, isOpe
                                     <p className="text-[10px] text-gray-500 mt-1">Found in AdSense Account > Settings</p>
                                 </div>
                                 <div>
+                                    <label className="text-gray-400 text-xs uppercase font-bold mb-1 block">AdSense Customer ID</label>
+                                    <input 
+                                        type="text"
+                                        placeholder="6292420416"
+                                        value={config.credentials.adSenseCustomerId}
+                                        onChange={(e) => updateCredential('adSenseCustomerId', e.target.value)}
+                                        className="w-full bg-gray-800 border border-gray-700 rounded p-2 text-white focus:border-yellow-500 outline-none" 
+                                    />
+                                    <p className="text-[10px] text-gray-500 mt-1">Found in AdSense Account Info</p>
+                                </div>
+                                <div>
                                     <label className="text-gray-400 text-xs uppercase font-bold mb-1 block">AdSense Slot ID</label>
                                     <input 
                                         type="text"
@@ -327,6 +338,13 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ config, setConfig, isOpe
                                 <li><strong>Monetization:</strong> AdSense ({config.credentials.adSenseId || 'Not Set'}) and Amazon ({config.credentials.amazonAffiliateTag || 'Not Set'}) injected.</li>
                                 <li><strong>Indexing:</strong> URLs are pinged to Google instantly via API for rapid ranking.</li>
                             </ul>
+                            <div className="mt-3 p-3 bg-blue-950/50 border border-blue-800 rounded">
+                                <p className="text-[10px] text-blue-300">
+                                    <strong>💡 Pro Tip: Never Stop Posting</strong><br/>
+                                    If using Replit Free, create a free account on <a href="https://uptimerobot.com" target="_blank" className="underline hover:text-white">UptimeRobot.com</a>. 
+                                    Add a new "HTTP Monitor" pointing to the URL Replit gives you when you run this code. This pings your bot every 5 mins, keeping it alive forever.
+                                </p>
+                            </div>
                         </div>
 
                         <div className="flex justify-between items-center mb-4">

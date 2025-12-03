@@ -1,5 +1,6 @@
 {
   "name": "Viral Velocity",
   "description": "A comprehensive dashboard to design, simulate, and generate code for automated Blogger pipelines using AI.",
-  "requestFramePermissions": []
+  "requestFramePermissions": [],
+  "authenticationProvider": "Firebase Authentication"
 }
